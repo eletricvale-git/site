@@ -132,11 +132,11 @@
             <label><span class="text-color">*</span> Assunto:</label>
             <select required="required" id="contact-subject" class="wpcf7-text" style="width: 53%;">
               <option value="">Selecione</option>
-              <option value="0">Orçamento</option>
-              <option value="1">Financeiro</option>
-              <option value="2">Compras</option>
-              <option value="3">Suporte</option>
-              <option value="4">Outros</option>
+              <option value="Orçamento">Orçamento</option>
+              <option value="Financeiro">Financeiro</option>
+              <option value="Compras">Compras</option>
+              <option value="Suporte">Suporte</option>
+              <option value="Outros">Outros</option>
             </select>
           </fieldset>
 
@@ -228,14 +228,13 @@
       var payload = JSON.stringify({
         'Name': fullName,
         'Email': email,
-        'Subject': subject,
         'Service': service,
         'Message': message,
         'date': new Date()
       });
       $.ajax({
         type: 'POST',
-        url: "https://eletricvale-5bcbc.firebaseio.com/contact.json",
+        url: "https://eletricvale-5bcbc.firebaseio.com/contact/subject.json",
         data: payload
       }).done(function(data) {
         alert('Obrigado pelo contato, sua mensagem foi registrada em nossos servidores. Retornaremos em breve.');
@@ -249,7 +248,7 @@
     });
 
     $('#contact-subject').change(function() {
-      if ($(this).val() === '0') {
+      if ($(this).val() === 'Orçamento') {
         $('#fieldset-service').fadeIn();
       } else {
         $('#fieldset-service').fadeOut();
