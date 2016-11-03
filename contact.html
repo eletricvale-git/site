@@ -237,7 +237,13 @@
         url: "https://eletricvale-5bcbc.firebaseio.com/contact.json",
         data: payload
       }).done(function(data) {
-        alert(data);
+        alert('Obrigado pelo contato, sua mensagem foi registrada em nossos servidores./nRetornaremos em breve.');
+        $('#contact-name').val('');
+        $('#contact-lastname').val('');
+        $('#contact-email').val('');
+        $('#contact-subject').val('');
+        $('#contact-service').val('');
+        $('#contact-message').val('');
       });
     });
 
