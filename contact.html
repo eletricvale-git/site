@@ -225,20 +225,17 @@
       var service = $('#contact-service').val();
       var message = $('#contact-message').val();
       var fullName = name + ' ' + lastName;
-      var form_data = new Array({
+      var payload = {
         'Name': fullName,
         'Email': email,
         'Subject': subject,
         'Service': service,
         'Message': message
-      });
+      };
       $.ajax({
         type: 'POST',
         url: "https://eletricvale-5bcbc.firebaseio.com/contact.json",
-        data: ({
-          'action': 'contact',
-          'form_data': form_data
-        })
+        data: payload
       }).done(function(data) {
         alert(data);
       });
