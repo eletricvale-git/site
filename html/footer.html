@@ -168,18 +168,16 @@
     $('.newsletter .submit').on('click', function(event) {
         event.preventDefault();
         var email = $('.email').val();
-        var form_data = new Array({
+        var payload = JSON.stringify({
             'Email': email
         });
         $.ajax({
             type: 'POST',
-            url: "contact.php",
-            data: ({
-                'action': 'newsletter',
-                'form_data': form_data
-            })
+            url: "https://eletricvale-5bcbc.firebaseio.com/newsletter.json",
+            data: payload
         }).done(function(data) {
-            alert(data);
+            $('.email').val('');
+            alert('Obrigado por se cadastrar.');
         });
     });
 
