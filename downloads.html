@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eletric Vale - Downloads</title>
+    <meta name="description" content="Eletric Vale">
+    <meta name="author" content="pixel-industry">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/basic.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/red.css" />
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="pixons/style.css" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+        <![endif]-->
+
+    <!--[if lt IE 9]>
+            <script src="js/selectivizr-min.js"></script>
+        <![endif]-->
+
+    <!--[if IE 8]>
+            <link rel="stylesheet" href="css/ie8.css" media="screen" />
+        <![endif]-->
+</head>
+
+<body>
+
+    <div id="header-wrapper" data-html="header" data-menu="download" class="clearfix"></div>
+    <div data-html="banner-pages" data-breadcrumbs="Downloads"></div>
+
+
+    <!-- #content-wrapper start -->
+    <section id="content-wrapper">
+        <div class="container_12">
+
+            <!-- .grid_8 start -->
+            <article class="grid_12">
+
+                <!-- .accordion start -->
+                <article class="accordion faq" style="width: 100%;">
+
+                    <!-- accordion-content-wrapp start -->
+                    <section class="accordion-content-wrapp">
+                        <div class="title active"><a href="#">INSTALAÇÕES ELÉTRICAS RESIDENCIAIS</a></div>
+                        <div class="content">
+                            <p>
+                                <a class="btn-big red" href="pdf/01.pdf" target="_blank" style="margin-right: 10px;">
+                                    <span>Download 01</span>
+                                </a>
+
+                                <a class="btn-big red" href="pdf/02.pdf" target="_blank" style="margin-right: 10px;">
+                                    <span>Download 02</span>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- .content end -->
+                    </section>
+                    <!-- accordion-content-wrapp end -->
+
+                    <!-- accordion-content-wrapp start -->
+                    <section class="accordion-content-wrapp">
+                        <div class="title"><a href="#">Dimensionamento de Cabos</a></div>
+                        <div class="content">
+                            <p>
+                                <a class="btn-big red" href="pdf/03.pdf" target="_blank" style="margin-right: 10px;">
+                                    <span>Download</span>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- .content end -->
+                    </section>
+                    <!-- accordion-content-wrapp end -->
+
+                    <!-- accordion-content-wrapp start -->
+                    <section class="accordion-content-wrapp">
+                        <div class="title"><a href="#">Ligação do DR</a></div>
+                        <div class="content">
+                            <p>
+                                <a class="btn-big red" href="pdf/04.pdf" target="_blank" style="margin-right: 10px;">
+                                    <span>Download</span>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- .content end -->
+                    </section>
+                    <!-- accordion-content-wrapp end -->
+
+                    <!-- accordion-content-wrapp start -->
+                    <section class="accordion-content-wrapp">
+                        <div class="title"><a href="#">Seção AWG</a></div>
+                        <div class="content">
+                            <p>
+                                <a class="btn-big red" href="pdf/05.pdf" target="_blank" style="margin-right: 10px;">
+                                    <span>Download</span>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- .content end -->
+                    </section>
+                    <!-- accordion-content-wrapp end -->
+
+                    <!-- accordion-content-wrapp start -->
+                    <section class="accordion-content-wrapp">
+                        <div class="title"><a href="#">Tabela Correntes e bitolas de cabos para circuitos trifasicos</a></div>
+                        <div class="content">
+                            <p>
+                                <a class="btn-big red" href="pdf/06.pdf" target="_blank" style="margin-right: 10px;">
+                                    <span>Download</span>
+                                </a>
+                            </p>
+                        </div>
+                        <!-- .content end -->
+                    </section>
+                    <!-- accordion-content-wrapp end -->
+
+                </article>
+                <!-- .accordion end -->
+            </article>
+            <!-- .grid_8 end -->
+
+        </div>
+    </section>
+    <!-- #content-wrapper end -->
+
+    <div data-html="footer"></div>
+
+    <!-- scripts -->
+    <script src="js/jquery-1.8.3.js"></script>
+    <!-- jQuery library -->
+    <script src="js/html.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <!-- jQuery placeholder fix for old browsers -->
+    <script src="js/jquery.carouFredSel-6.0.0-packed.js"></script>
+    <!-- CarouFredSel carousel plugin -->
+    <script src="js/jquery.touchSwipe-1.2.5.js"></script>
+    <!-- support for touch swipe on mobile devices -->
+    <script src="js/include.js"></script>
+    <!-- jQuery custom options -->
+
+    <script>
+        /* <![CDATA[ */
+        // NEWSLETTER FORM AJAX SUBMIT
+        $('.newsletter .submit').on('click', function(event) {
+            event.preventDefault();
+            var email = $('.email').val();
+            var form_data = new Array({
+                'Email': email
+            });
+            $.ajax({
+                type: 'POST',
+                url: "contact.php",
+                data: ({
+                    'action': 'newsletter',
+                    'form_data': form_data
+                })
+            }).done(function(data) {
+                alert(data);
+            });
+        });
+
+        // FOOTER CAROUSEL ARTICLE 
+        $("#foo1").carouFredSel({
+            auto: true,
+            scroll: 1,
+            pagination: "#foo1_pag",
+            swipe: {
+                ontouch: true,
+                onMouse: true
+            },
+            width: 'variable',
+            height: 'variable',
+            items: {
+                width: 'auto',
+                visible: 1
+            }
+        });
+
+        // TESTIMONIAL CAROUSEL
+        $("#foo2").carouFredSel({
+            auto: true,
+            scroll: 1,
+            swipe: {
+                ontouch: true,
+                onMouse: true
+            },
+            width: 'variable',
+            height: 'variable',
+            items: {
+                width: 'auto',
+                visible: 1
+            }
+        });
+        /* ]]> */
+
+    </script>
+</body>
+
+</html>

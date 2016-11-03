@@ -1,0 +1,186 @@
+<!-- #footer-wrapper start -->
+<div id="footer-wrapper" class="clearfix">
+
+    <!-- #footer -->
+    <footer id="footer" class="container_12">
+
+        <!-- .footer-widget-container start -->
+        <ul class="footer-widget-container grid_3">
+
+            <!-- .widget.widget_text start -->
+            <li class="widget widget_text">
+
+                <section class="carousel-article">
+                    <img src="img/red/logo-footer.png" alt="logo" />
+
+                    <br />
+                    <br />
+
+                    <ul id="foo1" class="carousel-li">
+                        <li>
+                            <p>
+                                Qualidade e Melhor Preço
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Atendimento Pós-Venda
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                Agilidade e garantia de sucesso
+                            </p>
+                        </li>
+                    </ul>
+
+                    <div class="clearfix"></div>
+
+                    <div class="carousel-pagination" id="foo1_pag"></div>
+                </section>
+
+            </li>
+            <!-- .widget.widget_text end -->
+        </ul>
+        <!-- .footer-widget-container end -->
+
+        <!-- .footer-widget-container start -->
+        <ul class="footer-widget-container grid_6">
+
+            <!-- .widget.widget_text start -->
+            <li class="widget widget_text">
+                <div class="title">
+                    <h5>localização</h5>
+                </div>
+                <p>
+                    Venha nos fazer uma visita!
+                </p>
+
+                <br />
+
+                <ul class="contact-info">
+                    <li class='address'>
+                        <p>Rua: Ione Mitico Hayashi, 890 Bosque dos Ipes</p>
+                        <p>São José dos Campos ,SP</p>
+                        <p>CEP: 12231-240</p>
+                    </li>
+
+                    <li class="phone">
+                        <p>Fones: 12 - 99235-2792 || 12 - 99725-5273 || 12 - 3018-5375</p>
+                    </li>
+
+                    <li class="mail">
+                        <p>Email: <a href='mailto:contato@eletricvale.com.br'>contato@eletricvale.com.br</a></p>
+                    </li>
+                </ul>
+            </li>
+            <!-- .widget.widget_text end -->
+        </ul>
+        <!-- .footer-widget-container end -->
+
+        <!-- .footer-widget-container start -->
+        <ul class="footer-widget-container grid_3">
+
+            <!-- .widget.widget_text start -->
+            <li class="widget widget_text">
+                <div class="title">
+                    <h5>Cadastre seu email para receber nossas promoções</h5>
+                </div>
+
+                <p>
+                    Nossos emails de divulgação só são enviados uma vez ao mês, e não divulgamos seu email.
+                </p>
+
+                <br />
+
+                <form class="newsletter">
+                    <input type="email" class="email" placeholder="Informe seu email aqui...">
+                    <input type="submit" class="submit" value="Enviar">
+                </form>
+            </li>
+            <!-- .widget.widget_text end -->
+
+        </ul>
+        <!-- footer-widget-container end -->
+    </footer>
+    <!-- #footer end -->
+
+    <!-- .container_12.copyright-container start -->
+    <div class="container_12 copyright-container">
+
+        <!-- .grid_12 start -->
+        <div class="grid_12">
+
+            <div class="grid_6 alpha">
+                <p>
+                    Eletric Vale. Todos os direitos reservados
+                </p>
+            </div>
+
+            <div class="grid_6 omega">
+                <ul class="footer-breadcrumbs">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">A Empresa</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Serviços</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .grid_6 omega end -->
+        </div>
+        <!-- .grid_12 end -->
+    </div>
+    <!-- .container_12.copyright-container end -->
+</div>
+<!-- #footer-wrapper end -->
+
+<script>
+    // FOOTER CAROUSEL ARTICLE
+    $("#foo1").carouFredSel({
+        auto: true,
+        scroll: 1,
+        pagination: "#foo1_pag",
+        width: 'variable',
+        height: 'variable',
+        items: {
+            width: 'auto',
+            visible: 1
+        },
+        swipe: {
+            ontouch: true,
+            onMouse: true
+        }
+    });
+
+    // NEWSLETTER FORM AJAX SUBMIT
+    $('.newsletter .submit').on('click', function(event) {
+        event.preventDefault();
+        var email = $('.email').val();
+        var form_data = new Array({
+            'Email': email
+        });
+        $.ajax({
+            type: 'POST',
+            url: "contact.php",
+            data: ({
+                'action': 'newsletter',
+                'form_data': form_data
+            })
+        }).done(function(data) {
+            alert(data);
+        });
+    });
+
+</script>

@@ -1,0 +1,74 @@
+<!-- .grid_4 start -->
+<article class="grid_4">
+    <!-- .section-title .center start -->
+    <section class="section-title center">
+
+        <!-- .ttile-container .carousel start -->
+        <div class="title-container">
+            <section class="title">
+                <h2>Novidades</h2>
+                <span>Veja o que mais preparamos para vocês</span>
+            </section>
+        </div>
+        <!-- .title-container .carousel end -->
+    </section>
+    <!-- .section-title .center end -->
+
+    <section class="testimonials-alternative">
+        <ul class="testimonials-alternative-nav">
+            <li>
+                <a href="#content-1" class="active"><img src="img/combate-a-incendio.jpg" alt="testimonial 1" /></a>
+            </li>
+            <li>
+                <a href="#content-2"><img src="img/ar-condicionado.png" alt="testimonial 2" /></a>
+            </li>
+            <li>
+                <a href="#content-3"><img src="img/cftv.png" alt="testimonial 3" /></a>
+            </li>
+            <li>
+                <a href="#content-4"><img src="img/marido-de-aluguel.jpg" alt="testimonial 4" /></a>
+            </li>
+        </ul>
+
+        <section class="testimonials-alternative-content">
+            <div id="content-1" class="content active">
+                <p class="text">
+                    <b>Combate a Incêndio</b>
+                    <hr>Instalação de Sistema de Alarme de Incêndio para Prédios, Condomínios, Comércios, Residências e etc. Trabalhamos com as Melhores marcas e modelos, garantia Total dos Serviços e Materiais.
+                </p>
+            </div>
+            <div id="content-2" class="content">
+                <p class="text">
+                    <b>Ar Condicionado - Higienização e Limpeza</b>
+                    <hr>A Eletric Vale atua no mercado do Vale do Paraíba a mais de 10 anos, com Clientes renomados. Os Profissionais que atuam conosco tem competência e conhecimento para todos os tipos de instalações Industrial, Comercial e Residencial.
+                </p>
+            </div>
+            <div id="content-3" class="content">
+                <p class="text">
+                    <b>Segurança Eletrônica</b>
+                    <hr>Tudo para sua empresa, Residencia e comércio, você mesmo monitora sem custo adicional pela internet, telefone celular, e onde você estiver a qualquer hora. A Tecnologia a sua disposição.
+                </p>
+            </div>
+            <div id="content-4" class="content">
+                <p class="text">
+                    <b>Marido de aluguel</b>
+                    <hr>O Marido de Aluguel trabalha especialmente com reparos e pequenas instalações para atender sua necessidade, na ELETRICVALE os profissionais são treinados para qualquer tipo de problema dentro de sua responsabilidade.
+                </p>
+            </div>
+        </section>
+    </section>
+</article>
+<!-- .grid_4 end -->
+<script>
+    // TESTIMONIALS ALTERNATIVE VERSION
+    $('.testimonials-alternative-nav').on('click', 'a', function(e) {
+        e.preventDefault();
+        var $current = $(this);
+        $('.testimonials-alternative-nav a').removeClass();
+        $('.testimonials-alternative-content .content').hide();
+        $current.addClass('active');
+        var contentID = $current.attr('href');
+        $('.testimonials-alternative-content').find(contentID).fadeIn();
+    });
+
+</script>

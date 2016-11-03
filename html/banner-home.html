@@ -1,0 +1,90 @@
+<!-- .rs-wrapper start -->
+<div class="rs-wrapper">
+
+    <div class="fullwidthbanner-container">
+
+        <div class="fullwidthbanner">
+            <ul>
+
+                <li data-transition="slotzoom-horizontal" data-slotamount="15">
+                    <img src="img/slider/slide11.jpg" alt="background">
+                    <div class="caption lfl regular_title" data-x="335" data-y="90" data-speed="700" data-start="2000" data-easing="easeOutBack">Equipe Especializada:</div>
+                    <div class="caption lfr regular_subtitle" data-x="390" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack">SPDA - Pára-Raios</div>
+                    <div class="caption lfr regular_subtitle" data-x="390" data-y="242" data-speed="700" data-start="3200" data-easing="easeOutBack">Elétrica</div>
+                    <div class="caption lfr regular_subtitle" data-x="390" data-y="202" data-speed="700" data-start="2900" data-easing="easeOutBack">Segurança Eletrônica</div>
+                </li>
+
+                <li data-transition="3dcurtain-vertical" data-slotamount="10">
+                    <img src="img/slider/slide12.jpg" alt="background">
+                    <div class="caption lfl regular_title2" data-x="400" data-y="80" data-speed="700" data-start="2000" data-easing="easeOutBack" style="width: 336px;">Conforto & Segurança</div>
+                    <div class="caption lfr regular_subtitle" data-x="508" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack">Telefonia</div>
+                    <div class="caption lfr regular_subtitle" data-x="508" data-y="202" data-speed="700" data-start="2900" data-easing="easeOutBack">Rede de Computadores</div>
+                    <div class="caption lfr regular_subtitle" data-x="508" data-y="242" data-speed="700" data-start="3200" data-easing="easeOutBack">Teste Ôhmico</div>
+                    <div class="caption lfr regular_subtitle" data-x="508" data-y="287" data-speed="700" data-start="3200" data-easing="easeOutBack">Marido de aluguel</div>
+                </li>
+
+                <li data-transition="slotzoom-horizontal" data-slotamount="15">
+                    <img src="img/slider/slide11.jpg" alt="background">
+                    <div class="caption lfl regular_title" data-x="335" data-y="90" data-speed="700" data-start="2000" data-easing="easeOutBack">Equipe Certificada:</div>
+                    <div class="caption lfr regular_subtitle" data-x="390" data-y="160" data-speed="700" data-start="2400" data-easing="easeOutBack">NR 10 e NR 35</div>
+                    <div class="caption lfr regular_subtitle" data-x="390" data-y="200" data-speed="700" data-start="3200" data-easing="easeOutBack">NBR 5410 e NBR5419</div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="btn-banner">
+        <a class="btn-big red" href="#" onclick="$('html,body').animate({scrollTop:650}, 2500);">
+            <span>Veja mais</span>
+        </a>
+    </div>
+</div>
+<!-- .rs-wrapper end -->
+
+<script>
+    // REVOLUTION SLIDER
+    jQuery(document).ready(function() {
+
+        if (jQuery.fn.cssOriginal !== undefined) // CHECK IF fn.css already extended
+            jQuery.fn.css = jQuery.fn.cssOriginal;
+
+        jQuery('.fullwidthbanner').revolution({
+            delay: 50000,
+            startheight: 413,
+            startwidth: 940,
+            hideThumbs: 200,
+            thumbWidth: 100,
+            thumbHeight: 50,
+            thumbAmount: 5,
+            navigationType: "none",
+            navigationArrows: "verticalcentered",
+            navigationStyle: "round",
+            navigationHAlign: "right",
+            navigationVAlign: "top",
+            navigationHOffset: 0,
+            navigationVOffset: 20,
+            soloArrowLeftHalign: "left",
+            soloArrowLeftValign: "center",
+            soloArrowLeftHOffset: 20,
+            soloArrowLeftVOffset: 0,
+            soloArrowRightHalign: "right",
+            soloArrowRightValign: "center",
+            soloArrowRightHOffset: 20,
+            soloArrowRightVOffset: 0,
+            touchenabled: "on",
+            onHoverStop: "on",
+            navOffsetHorizontal: 0,
+            navOffsetVertical: 20,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            hideSliderAtLimit: 0,
+            stopAtSlide: -1,
+            stopAfterLoops: -1,
+            shadow: 0,
+            fullWidth: "on"
+
+        });
+    });
+
+</script>

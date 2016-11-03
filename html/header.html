@@ -1,0 +1,167 @@
+<!-- #header-wrapper start -->
+<section id="header-wrapper" data-html="header" class="clearfix">
+  <!-- #header start -->
+  <header id="header" class="clearfix">
+
+    <!-- #logo start -->
+    <section id="logo">
+      <a href="index.html">
+        <img src="img/red/logo.png" alt="logo" />
+      </a>
+    </section>
+    <!-- #logo end -->
+
+    <!-- contact-info-container -->
+    <section id="contact-info-container">
+      <ul class="info">
+        <li>
+          <span class="text-dark">Fones:</span> 12 - 99235-2792 || 12 - 99725-5273 || 12 - 3018-5375
+        </li>
+
+        <li>
+          <span class="text-dark">Email: </span>
+          <a class="text-color" href="malito:contato@eletricvale.com.br">contato@eletricvale.com.br</a>
+        </li>
+      </ul>
+
+      <ul class="social-links">
+
+        <li>
+          <a href="https://www.facebook.com/Eletricvale" target="_blank" class="pixons-facebook-1"></a>
+        </li>
+
+        <li>
+          <a href="#" class="pixons-twitter-1"></a>
+        </li>
+
+        <!--
+                <li>
+                    <a href="#" class="pixons-linkedin"></a>
+                </li>
+                <li>
+                    <a href="#" class="pixons-xing"></a>
+                </li>
+                <li>
+                    <a href="#" class="pixons-skype"></a>
+                </li>
+                -->
+      </ul>
+    </section>
+    <!-- .contact-info-container end -->
+  </header>
+  <!-- #header end -->
+
+  <!-- #nav-container start -->
+  <section id="nav-container">
+
+    <section class="container_12">
+      <section class="grid_12">
+        <!-- #nav start -->
+        <nav id="nav">
+          <ul>
+            <li class="home">
+              <span class="nav-icon icon-home"></span>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li class="about">
+              <span class="nav-icon icon-list"></span>
+              <a href="about.html">A Empresa</a>
+            </li>
+
+            <li class="services">
+              <span class="nav-icon icon-cogs"></span>
+              <a href="#">Serviços</a>
+              <ul>
+                <li><a href="eletrica.html">Elétrica</a></li>
+                <li><a href="spda.html">SPDA - Pára-Raios</a></li>
+                <li><a href="telefonia.html">Telefonia</a></li>
+                <li><a href="rede-de-computadores.html">Rede de Computadores</a></li>
+                <li><a href="antena.html">Antena</a></li>
+                <li><a href="teste-ohmico.html">Teste Ôhmico</a></li>
+                <li><a href="marido-de-aluguel.html">Marido de Aluguel</a></li>
+                <li><a href="seguranca-eletronica.html">Segurança Eletrônica</a></li>
+                <li><a href="ar-condicionado.html">Ar Condicionado - Higienização e Limpeza</a></li>
+                <li><a href="prevencao-incendio.html">Sistema de Prevenção a Incendio</a></li>
+              </ul>
+            </li>
+
+            <li class="download">
+              <span class="nav-icon icon-file"></span>
+              <a href="downloads.html">Downloads</a>
+            </li>
+
+            <li class="sustentabilidade">
+              <span class="nav-icon icon-leaf"></span>
+              <a href="sustainability.html">Sustentabilidade</a>
+            </li>
+
+            <li class="workhere">
+              <span class="nav-icon icon-user"></span>
+              <a href="work-here.html">Trabalhe Conosco</a>
+            </li>
+
+            <li class="contact">
+              <span class="nav-icon icon-map-marker"></span>
+              <a href="contact.html">Suporte e Atendimento</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- #nav end -->
+
+        <!-- responsive navigation start -->
+        <select id="nav-responsive">
+          <option selected="" value="">Site Navigation...</option>
+          <option value="index.html">Home</option>
+          <option value="about.html">A Empresa</option>
+          <option value="downloads.html">Downloads</option>
+          <option value="sustainability.html">Sustentabilidade</option>
+          <option value="http://goo.gl/forms/nzydJJFRHU">Trabalhe Conosco</option>
+          <option value="contact.html">Suporte e Atendimento</option>
+        </select>
+        <!-- responsive navigation end -->
+
+      </section>
+      <!-- .grid_12 end -->
+    </section>
+    <!-- .container_12 end -->
+
+  </section>
+  <!-- #nav-container end -->
+</section>
+<!-- 3header-wrapper end -->
+
+<!-- .top-shadow -->
+<div class="top-shadow"></div>
+
+<script>
+  (jQuery)(function($) {
+
+    /* ================ MAIN NAVIGATION ================ */
+
+    (function() {
+      $(" #nav ul ").css({
+        display: "none"
+      }); // Opera Fix
+      $(" #nav li").hover(function() {
+        $(this).find('ul:first').css({
+          visibility: "visible",
+          display: "none"
+        }).slideDown(250);
+      }, function() {
+        $(this).find('ul:first').css({
+          visibility: "hidden"
+        });
+      });
+    })();
+
+    (function() {
+      $('#nav-responsive').on('change', function() {
+        window.location = $(this).val();
+      });
+    })();
+
+    $('#nav').find('.' + $('[data-menu]')[0].dataset.menu).addClass('current-menu-item');
+  });
+
+</script>

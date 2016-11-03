@@ -1,0 +1,111 @@
+<!-- .grid_8 start -->
+<article class="grid_8">
+    <!-- .section-title .center start -->
+    <section class="section-title center">
+
+        <!-- .ttile-container .carousel start -->
+        <div class="title-container">
+            <section class="title">
+                <h2>Eletric Vale</h2>
+                <span>Nossa Visão, Missão e Valores</span>
+            </section>
+        </div>
+        <!-- .title-container .carousel end -->
+    </section>
+    <!-- .section-title .center end -->
+
+    <!-- .tabs start -->
+    <ul class="grid_3 alpha tabs vertical">
+        <li class="active">
+            <a href="#tab1">
+                <i class="icon-leaf"></i> Visão
+            </a>
+        </li>
+        <li class="">
+            <a href="#tab2">
+                <i class="icon-group"></i> Missão
+            </a>
+        </li>
+        <li class="">
+            <a href="#tab3">
+                <i class="icon-group"></i> Valores
+            </a>
+        </li>
+    </ul>
+    <!-- .tabs end -->
+
+    <!-- .tabs-content-wrap vertical start -->
+    <section class="grid_5 omega tab-content-wrap vertical">
+
+        <!-- #tab1 content start -->
+        <div id="tab1" class="tab-content">
+            <img src="img/visao2.jpg" width="200" class="float-left" alt="image" />
+
+            <p>
+                Ser a melhor Empresa e referência em Produtos e serviços.
+            </p>
+
+        </div>
+        <!-- #tab1 content end -->
+
+        <!-- tab2 content start -->
+        <div id="tab2" class="tab-content">
+            <img src="img/about/support.png" class="float-left" alt="image" />
+
+            <p>
+                Atender com Serviços e Vendas as expectativas com eficiência e rapidez, assegurando a economia e o bem estar de Nossos Clientes e Colaboradores.
+            </p>
+
+        </div>
+        <!-- #tab2 content end -->
+
+        <!-- tab3 content start -->
+        <div id="tab3" class="tab-content">
+            <img src="img/comunicador.jpg" width="120" class="float-left" alt="image" />
+
+            <p>
+                -Ter a preferência do Cliente;
+                <br> -Atender com total Segurança;
+                <br> -Excelência com simplicidade e economia;
+                <br> -Foco nos Resultados;
+                <br> -Qualidade;
+            </p>
+
+        </div>
+        <!-- #tab3 content end -->
+
+    </section>
+    <!-- .tabs-content-wrap .vertical end -->
+</article>
+<!-- .grid_8 end -->
+
+<script>
+    /* ================ CONTENT TABS ================ */
+
+    (function() {
+        $('.tabs').each(function() {
+            var $tabLis = $(this).find('li');
+            var $tabContent = $(this).next('.tab-content-wrap').find('.tab-content');
+
+            $tabContent.hide();
+            $tabLis.first().addClass('active').show();
+            $tabContent.first().show();
+        });
+
+        $('.tabs').on('click', 'li', function(e) {
+            var $this = $(this);
+            var parentUL = $this.parent();
+            var tabContent = parentUL.next('.tab-content-wrap');
+
+            parentUL.children().removeClass('active');
+            $this.addClass('active');
+
+            tabContent.find('.tab-content').hide();
+            var showById = $($this.find('a').attr('href'));
+            tabContent.find(showById).fadeIn();
+
+            e.preventDefault();
+        });
+    })();
+
+</script>

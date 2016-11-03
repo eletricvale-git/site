@@ -1,0 +1,40 @@
+<!-- .page-title-container start -->
+<section class="page-title-container">
+
+    <!-- .container_12 start -->
+    <div class="container_12">
+
+        <!-- .page-title start -->
+        <div class="page-title grid_12">
+            <div class="title">
+                <h1 class="banner-service-title"></h1>
+            </div>
+
+            <ul class="breadcrumbs">
+                <li><a class="home" href="#">Home</a></li>
+            </ul>
+        </div>
+        <!-- .page-title end -->
+    </div>
+    <!-- .container_12 end -->
+</section>
+<!-- .page-title-container end -->
+
+<script>
+    var breadcrumbs = $('[data-breadcrumbs]')[0].dataset.breadcrumbs.split(',');
+    var activeClass = '';
+    for (var i = 0; i < breadcrumbs.length; i++) {
+        if (breadcrumbs.length === (i + 1)) {
+            activeClass = 'active';
+        }
+        $('.breadcrumbs').append('<li>/</li><li><span class="' + activeClass + '">' + breadcrumbs[i] + '</span></li>');
+    }
+    $('.banner-service-title').html(breadcrumbs[breadcrumbs.length - 1]);
+
+    if ($('[data-title]')) {
+        try {
+            $('.banner-service-title').html($('[data-title]')[0].dataset.title);
+        } catch (e) {}
+    }
+
+</script>
