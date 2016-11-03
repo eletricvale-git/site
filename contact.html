@@ -234,7 +234,7 @@
       });
       $.ajax({
         type: 'POST',
-        url: "https://eletricvale-5bcbc.firebaseio.com/contact/subject.json",
+        url: 'https://eletricvale-5bcbc.firebaseio.com/contact/' + subject + '.json',
         data: payload
       }).done(function(data) {
         alert('Obrigado pelo contato, sua mensagem foi registrada em nossos servidores. Retornaremos em breve.');
